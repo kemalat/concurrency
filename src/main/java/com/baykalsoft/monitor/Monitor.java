@@ -36,7 +36,6 @@ public class Monitor {
     try {
       Monitor starter = Monitor.getSingleton();
       starter.start();
-
     } catch (Exception e) {
       e.printStackTrace();
     }
@@ -53,24 +52,18 @@ public class Monitor {
 
       while (true) {
         try {
-
           int val = randomizer();
           if (val % 7 == 0) {
-
             process.resume();
           } else {
             process.suspend();
-
           }
           Thread.sleep(1500);
           System.out.println("Sleeping 1500 milliseconds.");
         } catch (InterruptedException e) {
           e.printStackTrace();
-
         }
       }
-
-
     } catch (Exception e) {
       e.printStackTrace();
     }
@@ -107,7 +100,6 @@ public class Monitor {
           } catch (InterruptedException e) {
             e.printStackTrace();
           }
-
         }
         System.out.println("I will wait");
 
